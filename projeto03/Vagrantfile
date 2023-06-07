@@ -1,8 +1,10 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-20.04"
+  config.vm.provision "shell", path: "script.sh"
   config.vm.provider "virtualbox" do |v|
-  v.name = "projeto00"  
+  v.name = "projeto03"  
   v.memory = "1024"
   v.cpus = "1"
   end
-  end
+end
+
